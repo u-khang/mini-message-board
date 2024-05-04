@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title message board
+    body
+        h1 Message Board 
+        a(href="#") Post a message
+        ul 
+            - var messages = ${messages}
+            each message in messages
+                div.message-container
+                    div.user-heading
+                        p.username #{message.username}
+                        p.timestamp #{message.timestamp}
+                    p.message-text #{message.text}
+    
+
+
+
