@@ -8,10 +8,15 @@ html(lang="en")
     body 
         h1 Your message
         a(href="/") [Return]
-        form(method="POST" action="/new-message" class="message-form")
-            label(for="username") Name:
-            input(type="text", name="username" id="username" required)
-            label(for="message-text") Message:
-            input(type="text", name="messageText" id="message-text" required)
-            button#submit Submit
+        div.form-container
+            form(method="POST" action="/new-message" class="message-form")
+                div.name-container
+                    label(for="username") Name:
+                    input(type="text", name="username" id="username" required)
+                br
+                div.message-text-container
+                    label(for="message-text") Message:
+                    textarea(type="text", name="messageText", id="message-text", required rows="5" cols="50")
+                br
+                button#submit Submit
 
