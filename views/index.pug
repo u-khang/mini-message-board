@@ -7,15 +7,19 @@ html(lang="en")
         link(rel="stylesheet" href="../stylesheets/index.css")
     body
         h1#top Message Board 
-        a(href="/new-message") [Post a message]
-        a(class="jump bottom", href="#bottom") [Go to bottom]
-        ul 
+        div.actions
+            a(href="/new-message") [Post a message]
+            a(class="jump bottom", href="#bottom") [Go to bottom]
+        ul.messages 
             each message in messages
                 div.message-container
-                    div.user-heading
-                        p.username #{message.username}
-                        p.timestamp #{message.timestamp}
-                    p.message-text #{message.text}
+                    div.side-arrow #{'>>'} 
+                    div.message-content
+                        div.user-heading
+                            p.username 
+                                b #{message.username}
+                            p.timestamp #{message.timestamp}
+                        p.message-text #{message.text}
         a(class="jump top" href="#top" id="bottom") [Go to top]
     
 
