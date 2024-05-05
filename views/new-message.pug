@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title new message
+    body 
+        h1 Your message
+        form(method="POST" action="/new-message" class="message-form")
+            label(for="username") Name:
+            input(type="text", name="username" id="username" required)
+            label(for="message-text") Message:
+            input(type="text", name="messageText" id="message-text" required)
+            button#submit Submit
+
