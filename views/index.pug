@@ -1,5 +1,22 @@
-extends layout
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title message board
+    body
+        h1 Message Board 
+        a(href="/new-message") [Post a message]
+        a(class="jump bottom", href="#bottom" id="top") [Go to bottom]
+        ul 
+            each message in messages
+                div.message-container
+                    div.user-heading
+                        p.username #{message.username}
+                        p.timestamp #{message.timestamp}
+                    p.message-text #{message.text}
+        a(class="jump top" href="#top" id="bottom") [Go to top]
+    
 
-block content
-  h1= title
-  p Welcome to #{title}
+
+
