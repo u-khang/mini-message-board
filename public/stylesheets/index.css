@@ -50,6 +50,12 @@ a:first-child {
 
 .message-text {
   margin-left: 2rem;
-  word-break: break-all;
+  font-family: inherit;
+
+  white-space: pre-wrap;       /* wrapping pre text */
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap;     
+  white-space: -o-pre-wrap;   
+  word-wrap: break-word;    
 }
 

@@ -4,7 +4,7 @@ var router = express.Router();
 const messages = [
     {
       text: "Hi there!",
-      username: "Amando",
+      username: "Amanda",
       timestamp: new Date()
     },
     {
@@ -17,6 +17,28 @@ const messages = [
       username: "Twilight Sparkle",
       timestamp: new Date()
     },
+    {
+      text: 
+      `Dark chocolate cake layers:
+      Flour-based baking spray for the pans
+      1 1/2 cups hot water almost boiling
+      3 tablespoons espresso powder
+      3 oz. semisweet chocolate finely chopped about 1/2 cup
+      2 1/2 cups all-purpose flour
+      2 1/2 cups granulated sugar
+      1/2 cup light brown sugar lightly packed
+      1 1/2 cups unsweet dark cocoa powder sifted
+      2 teaspoons baking soda
+      3/4 teaspoons baking powder
+      1 1/4 teaspoons fine grain salt
+      3 large eggs
+      3/4 cup vegetable oil
+      1 1/2 cups sour cream
+      2 teaspoons vanilla extract
+      2/3 cup Kahlua liqueur`,
+      username: "Remy",
+      timestamp: new Date(),
+    }
   ];
 
 /* GET home page. */
